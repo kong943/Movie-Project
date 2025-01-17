@@ -12,7 +12,7 @@ import ContactUs from './pages/ContactUs'
 import MovieDetail from './pages/MovieDetail'
 import { Provider } from 'react-redux'
 import { store } from './store'
-import LogIn from './pages/Login'
+import LogInPage from './pages/LogInPage'
 const router = createBrowserRouter(
   [
     {
@@ -42,7 +42,7 @@ const router = createBrowserRouter(
     },
     {
       path: '/login',
-      element: <LogIn />
+      element: <LogInPage />
     },
     {
       path: '/register',
