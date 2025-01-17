@@ -6,60 +6,60 @@ import Home from './pages/Home'
 import MainLayout from './layouts/MainLayout'
 import People from './pages/People'
 import Error from './pages/Error'
-import LogIn from './pages/Login'
 import Register from './pages/Register'
 import AboutUS from './pages/AboutUs'
 import ContactUs from './pages/ContactUs'
 import MovieDetail from './pages/MovieDetail'
 import { Provider } from 'react-redux'
 import { store } from './store'
+import LogIn from './pages/Login'
 const router = createBrowserRouter(
-[
-   {
-path: '/',
-element: <MainLayout/>,
-children: [
-{
-path: "/",
-element: <Home />
-},
-{
-path: '/people',
-element: <People/>
-},
-{
-  path: '/about-Us',
-element: <AboutUS/>
-},
-{
-  path: '/contact-us',
-element: <ContactUs/>
-},
+  [
+    {
+      path: '/',
+      element: <MainLayout />,
+      children: [
+        {
+          path: "/",
+          element: <Home />
+        },
+        {
+          path: '/people',
+          element: <People />
+        },
+        {
+          path: '/about-Us',
+          element: <AboutUS />
+        },
+        {
+          path: '/contact-us',
+          element: <ContactUs />
+        },
 
-],
-errorElement: <Error/>
+      ],
+      errorElement: <Error />
 
-},
-{
-  path: '/login',
-element: <LogIn/>
-},
-{
-  path: '/register',
-element: <Register/>
-},
-{
-  path: '/movie',
-element: <MovieDetail/>
-},
+    },
+    {
+      path: '/login',
+      element: <LogIn />
+    },
+    {
+      path: '/register',
+      element: <Register />
+    },
+    {
+      path: '/movie',
+      element: <MovieDetail />
+    },
 
-]
+  ]
 )
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <Provider store={store}>
-    <RouterProvider router={router}/>
+      <RouterProvider router={router} />
     </Provider>
   </StrictMode>,
 )
