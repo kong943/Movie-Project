@@ -8,6 +8,6 @@ export const store = configureStore({
   reducer: {
     counter: counterReducer,
     movie : movieReducer
-    Contact: contactReducer
+    // Contact: contactReducer
   },
 })

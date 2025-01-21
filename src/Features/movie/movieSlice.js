@@ -3,7 +3,7 @@ import { fetchMovies } from "./movieAction";
 
 const initialState = {
     data: {},
-    status: "",
+    status: " ",
     error: {}
 }
 
